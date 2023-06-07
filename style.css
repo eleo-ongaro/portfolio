@@ -70,6 +70,7 @@ a:link, a:visited {
 header {
     display: flex;
     flex-direction: row;
+    margin-left: 0%;
 }
 
 nav{
@@ -120,18 +121,18 @@ main{
 /* welcome */
 
 .welcome{
-    width: 100%;
+    width:100%;
     display: flex;
-    flex-direction:row;
-    align-content: center;
-
+    flex-direction: row;
+    align-self: center;
 }
+
 .welcome-container{
     width: 100%;
     display: flex;
-    flex-direction:column;
-    
-
+    flex-direction: column;
+    justify-content: space-between;
+/* MEPA Q ESTÁ AL PEDO, O MAL HECHO..*/
 }
 
 .hola{
@@ -145,16 +146,16 @@ main{
 
 /* RETRATO */
 .retrato-box{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: #ffff7a 0px 0px 0px 3px, #8dd6dc 0px 0px 0px 6px, #b14c8b 0px 0px 0px 9px, #e376df 0px 0px 0px 12px, #dd91dd 0px 0px 0px 15px;
 }
 
 .retrato {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     object-position: center;
     object-fit: cover;
 }
@@ -256,7 +257,7 @@ main{
 }
 
 img{
-    width: 30%;
+    width: 15rem;
 }
 
 .card-portfolio{
