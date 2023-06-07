@@ -60,6 +60,9 @@ li{
 /* poner color secundario para VISITED */
 /* JS agregarle q al clikear abra en una ventana nueva */
 a:link, a:visited {
+    font-family: 'Zeyada', cursive;
+    font-size: 3rem;
+    font-weight: bolder;
     text-decoration: none;
     color:#b14c8b;
 }  
@@ -169,11 +172,9 @@ main{
  */
 
 .i-do{
-    width: 10%;
+    width:fit-content;
     display: flex;
     flex-direction:column;
-    
-    
 }
 
 /* CONOCIMIENTOS */
