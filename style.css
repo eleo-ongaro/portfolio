@@ -1,366 +1,200 @@
-/* PALETA POSIBLE:
+/* PALETA DE COLORES */
+:root {
+    --amarillo: #ffff7a;
+    --verdecito: #8dd6dc;
+    --verde-obscuro: #ff91c4;
+    /* Cambio realizado */
+    --lila3: #e376df;
+    --lila2: #dd91dd;
+    --lila1: #daadda;
+    --rosa-pastel: #d8b3d9;
+    --rosa-obscuro: #b14c8b;
+}
 
-#ffff7a
-#e3da93 amarillo pastel
-#8dd6dc verdecito
-#469283 verde mas obscuro
-#e376df lila3
-#dd91dd lila2
-#daadda lila1
-#d8b3d9 rosa pastel
-#b14c8b rosa viejo obscuro */
-
-/* FUENTES ---- NO ME CONVENCEN 🤔
-
-font-family: 'Comforter', cursive;
-font-family: 'Pacifico', cursive;
-font-family: 'Reenie Beanie', cursive;
-font-family: 'Zeyada', cursive;
-*/
-
-body{
-    background-color: #ffff7a;
+/* FUENTE */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--amarillo);
+    color: var(--rosa-obscuro);
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    color:rgb(27, 27, 27);
-    
 }
 
-h1{
-    font-family: 'Zeyada', cursive;
-    font-size: 5rem;
+h1,
+h2 {
     margin: 0;
-    padding: 0;
 }
-h2{
-    font-family: 'Zeyada', cursive;
-    font-size: 3rem;
+
+p,
+span,
+li,
+a {
     margin: 0;
-    padding: 0;
+    font-size: 1.5rem;
 }
 
-p{
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 3rem;
-}
-
-span{
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 2rem;
-}
-
-li{
-    font-family: 'Zeyada', cursive;
-    font-size: 1rem;
-    font-weight: bolder;
-}
-
-/* HIPERVÍNCULOS */
-/* poner color secundario para VISITED */
-/* JS agregarle q al clikear abra en una ventana nueva */
-a:link, a:visited {
-    font-family: 'Zeyada', cursive;
-    font-size: 3rem;
-    font-weight: bolder;
+/* LINKS */
+a {
     text-decoration: none;
-    color:#b14c8b;
-}  
+    color: var(--rosa-obscuro);
+}
 
+a:hover {
+    color: var(--lila3);
+}
 
+/* HEADER */
+header {
+    background-color: var(--amarillo);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 
 /* NAV BAR */
-header {
-    display: flex;
-    flex-direction: row;
-    margin-left: 0%;
-}
-
-nav{
-    background-color: #ffff7a;
-    margin-right: 20px;
+nav {
+    background-color: var(--amarillo);
     width: 100%;
-    height: 60px;
+    height: 80px;
+    /* Ajusta la altura según lo necesites */
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     position: sticky;
     top: 0;
     border-bottom: 1px solid #f0db50;
-    -webkit-box-shadow: 0px 9px 20px 0px rgba(245,226,81,1);
--moz-box-shadow: 0px 9px 20px 0px rgba(245,226,81,1);
-box-shadow: 0px 9px 20px 0px rgba(245,226,81,1);
+    -webkit-box-shadow: 0px 9px 20px 0px rgba(245, 226, 81, 1);
+    -moz-box-shadow: 0px 9px 20px 0px rgba(245, 226, 81, 1);
+    box-shadow: 0px 9px 20px 0px rgba(245, 226, 81, 1);
 }
 
-.ul-nav{
-    width: 100%;
+.ul-nav {
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
+    margin: 0;
 }
 
-.li-nav{
+.li-nav {
+    font-weight: bold;
+    font-size: 1.2rem;
     margin-left: 20px;
-    padding: 5px;
-    align-items: center;
-    font-size: 25px;
-}
-
-/* LISTS */
-ul {
-    list-style: none;
+    /* Espacio entre elementos de la lista de navegación */
+    display: inline-block;
+    /* Mostrar elementos en línea */
 }
 
 /* MAIN */
-
-main{
-    width: 1vh;
-    margin: 2rem;
-    margin-top: 5rem;
+main {
     display: flex;
     flex-direction: column;
-}
-
-/* welcome */
-
-.welcome{
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-}
-
-.welcome-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-/* MEPA Q ESTÁ AL PEDO, O MAL HECHO..*/
-}
-
-.hola{
-    display: flex;
-    flex-direction:row;
-    width: 30%;
-    margin-left: 20px;
-    padding: 5px;
     align-items: center;
 }
 
+i{
+    font-size: 2rem;
+}
+.welcome-container {
+    padding-top: 15px;
+}
+
 /* RETRATO */
-.retrato-box{
-    width: 300px;
-    height: 300px;
+.retrato-box {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: #ffff7a 0px 0px 0px 3px, #8dd6dc 0px 0px 0px 6px, #b14c8b 0px 0px 0px 9px, #e376df 0px 0px 0px 12px, #dd91dd 0px 0px 0px 15px;
+    margin: 2rem 0;
+    box-shadow: inset 0 0 0 3px var(--amarillo), inset 0 0 0 6px var(--verdecito),
+        inset 0 0 0 9px var(--rosa-obscuro), inset 0 0 0 12px var(--lila3),
+        inset 0 0 0 15px var(--lila2);
 }
 
 .retrato {
-    width: 300px;
-    height: 300px;
-    object-position: center;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-/* RETRATO2: NO ME COPA ESE BORDE. Q OTRAS FORMAS HAY Q NO SEAN CUDRADAS, SINO MAS NATURALES, FLUIDAS?
-.retrato2 { 
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-}
- */
-
-.i-do{
-    width:fit-content;
-    display: flex;
-    flex-direction:column;
-}
-
 /* CONOCIMIENTOS */
-
-.knowledge{
-    margin: 5px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #e54d2b;
+.knowledge {
+    background-color: var(--verde-obscuro);
+    padding: 2rem 0;
 }
 
-.knowledge-container{
-    margin: 5px;
-    width: 100%;
+.knowledge-container {
     display: flex;
     flex-direction: column;
-    
-    background-color: #322c05;
-    
+    align-items: center;
 }
 
-.knowledge-icon{
-    background-color: #478fc7;
-    border: 100px, solid, #f60404;
-    width: 100%;
-    height: 20%;
+.knowledge-icon-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.knowledge-icon {
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
+    background-color: var(--verdecito);
+    border: 5px solid var(--rosa-obscuro);
+    justify-content: center;
+    align-items: center;
+}
+
+/* QUOTE */
+.quote {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+    align-items: center;
+    /* Alinea verticalmente los elementos */
+    margin: 2rem;
     
-    ;
+    margin-right: 5.5rem;
 }
 
-.fa-html5{
-    color: #e54d2b;
+.parrafo-quote{
+    margin-top: 2rem;
 }
 
-.fa-css3-alt{
-    color: #478fc7;
-}
-
-.fa-sass{
-    color: #cc6699;
-}
-
-.fa-square-js{
-    color: #f0db50;
-
-}
-
-.fa-react{
-    color: #6ddafb;
-}
-
-.fa-git-alt{
-    color: #e74d2b;
-}
-
-.knowledge-list{
-    font-size: 15rem;
-}
-
-/*  QUOTE */
 .chat-bubble {
-    width: 40%;
+    width: 300px;
+    /* Ajusta el tamaño de la imagen según lo necesites */
+    margin-right: 1rem;
+    /* Ajusta el margen derecho según lo necesites */
+    align-items: center;
+    /* Alinea verticalmente la imagen */
 }
 
-.proyect-container {
-    margin: 5px;
-    padding: 5px;
+/* PROYECTOS */
+.project-container {
     display: flex;
-    flex-direction:row;
-    justify-content: center; /* NOFUNCAAAAAAAAA */
-    border: 50px solid black;
-    background-color: #478fc7;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-img{
-    width: 15rem;
+.project-list{
+    background-color: #8dd6dc;
 }
 
-.card-portfolio{
-    display: flex;
-    width: 30%;
-    border: 50px solid black;
-    background-color: #e54d2b;
+.img-project {
+    width: 200px;
 }
 
-.card-robot{
-    width: 30%;
-    border: 50px solid black;
-    background-color: #e54d2b;
-}
+/* CONTACTO */
 
-.card-match{
-    width: 30%;
-    border: 50px solid black;
-    background-color: #e54d2b;
-}
-
-.card-money{
-    width: 30%;
-    border: 50px solid black;
-    background-color: #e54d2b;
-}
-
-.card-administration{
-    width: 30%;
-    border: 50px solid black;
-    background-color: #e54d2b;
-}
-
-.card-todo-app{
-    width: 30%;
-    border: 50px solid black;
-    background-color: #e54d2b;
-}
-
-.card-movies{
-    width: 30%;
-    border: 50px solid black;
-    background-color: #e54d2b;
-}
-
-
-
-
-/* CONTACT */
-
-.li-contact{
-    font-size: 2rem;
-}
-
-/* FOOTER */
-
-footer{
-    padding-right: 0;
-    margin-right: 0;
-    width: 100%;
-    height: 20%;
-    background-color: #f0db50;
+.contact-div{
     display: flex;
     flex-direction: column;
-    -webkit-box-shadow: 0px -5px 13px 1px rgba(232,210,67,1);
-    -moz-box-shadow: 0px -5px 13px 1px rgba(232,210,67,1);
-    box-shadow: 0px -5px 13px 1px rgba(232,210,67,1);
+    align-items: center;
 }
-.contact-footer{
+ul {
+    list-style-type: none;
+}
+
+.contact-div-ul{
     display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-}
-
-.ul-footer{
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;   
-
-}
-
-.li-footer{
-    padding-inline: 10%;
-    align-items: center;    
-}
-
-.fa-linkedin-in{
-    font-size: 2rem;
-}
-
-.fa-whatsapp{
-    font-size: 2rem;
-}
-
-.fa-github{
-    font-size: 2rem;
-}
-
-.fa-envelope{
-    font-size: 2rem;    
+    justify-content: center;
+    flex-wrap: wrap;
 }
