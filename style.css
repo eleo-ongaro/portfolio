@@ -83,11 +83,6 @@ nav {
 }
 
 /* MAIN */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 i{
     font-size: 2rem;
