@@ -83,6 +83,12 @@ nav {
 }
 
 /* MAIN */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
 
 i{
     font-size: 2rem;
@@ -113,6 +119,7 @@ i{
 .knowledge {
     background-color: var(--verde-obscuro);
     padding: 2rem 0;
+    height: 80vh;
 }
 
 .knowledge-container {
@@ -140,12 +147,11 @@ i{
 .quote {
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente los elementos */
     align-items: center;
-    /* Alinea verticalmente los elementos */
     margin: 2rem;
-    
     margin-right: 5.5rem;
+    height: 80vh;
+}
 }
 
 .parrafo-quote{
@@ -162,6 +168,10 @@ i{
 }
 
 /* PROYECTOS */
+.project-list{
+    height: 90vh;
+}
+
 .project-container {
     display: flex;
     flex-wrap: wrap;
