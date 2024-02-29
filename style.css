@@ -11,12 +11,24 @@
     --rosa-obscuro: #b14c8b;
 }
 
+* {
+    max-width: 100vw;
+}
+
+/* html{
+    overflow-x: hidden;
+} */
+
 /* FUENTE */
 body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--amarillo);
     color: var(--rosa-obscuro);
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -38,9 +50,6 @@ a {
     color: var(--rosa-obscuro);
 }
 
-a:hover {
-    color: var(--lila3);
-}
 
 /* HEADER */
 header {
@@ -54,17 +63,15 @@ header {
 nav {
     background-color: var(--amarillo);
     width: 100%;
-    height: 80px;
-    /* Ajusta la altura según lo necesites */
+    height: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
-    border-bottom: 1px solid #f0db50;
-    -webkit-box-shadow: 0px 9px 20px 0px rgba(245, 226, 81, 1);
-    -moz-box-shadow: 0px 9px 20px 0px rgba(245, 226, 81, 1);
-    box-shadow: 0px 9px 20px 0px rgba(245, 226, 81, 1);
+    -webkit-box-shadow: 0px 9px 20px 0px #f5e251;
+    -moz-box-shadow: 0px 9px 20px 0px #f5e251;
+    box-shadow: 0px 9px 20px 0px #f5e251;
 }
 
 .ul-nav {
@@ -87,15 +94,42 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    padding-top: 7rem;
 }
 
-i{
-    font-size: 2rem;
+.i-do {
+    display: flex;
+    width: fit-content;
+    /* padding-left: 1rem; */
 }
-.welcome-container {
-    padding-top: 15px;
+
+.i-do-a:hover {
+
+    --b: 0.2rem;
+    /* the thickness of the line */
+    --c: #ce61a4;
+    /* the color */
+
+    color: #8dd6dc;
+    padding-block: var(--b);
+    background:
+        linear-gradient(var(--c) 50%, #8dd6dc 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
 }
+
+.i-do-a:hover {
+    --_p: 100%;
+    --_s: .1s;
+}
+
+
+/* .i-do-a {
+        justify-content: center;
+} */
 
 /* RETRATO */
 .retrato-box {
@@ -118,8 +152,9 @@ i{
 /* CONOCIMIENTOS */
 .knowledge {
     background-color: var(--verde-obscuro);
-    padding: 2rem 0;
-    height: 80vh;
+    height: 100vh;
+    padding-top: 5rem;
+
 }
 
 .knowledge-container {
@@ -143,6 +178,10 @@ i{
     align-items: center;
 }
 
+.knowledge-list {
+    font-size: 7rem;
+}
+
 /* QUOTE */
 .quote {
     display: flex;
@@ -150,26 +189,27 @@ i{
     align-items: center;
     margin: 2rem;
     margin-right: 5.5rem;
-    height: 80vh;
-}
+    height: 100vh;
+
 }
 
-.parrafo-quote{
-    margin-top: 2rem;
+.parrafo-quote1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
 }
 
 .chat-bubble {
-    width: 300px;
-    /* Ajusta el tamaño de la imagen según lo necesites */
-    margin-right: 1rem;
-    /* Ajusta el margen derecho según lo necesites */
-    align-items: center;
-    /* Alinea verticalmente la imagen */
+    width: 400px;
+    padding-top: 15rem;
+
 }
 
 /* PROYECTOS */
-.project-list{
-    height: 90vh;
+.project-list {
+    background-color: #8dd6dc;
+    height: 100vh;
+    padding-top: 5rem;
 }
 
 .project-container {
@@ -179,27 +219,67 @@ i{
     margin-bottom: 2rem;
 }
 
-.project-list{
-    background-color: #8dd6dc;
+.robot-memes {
+    width: 200px;
 }
 
-.img-project {
+.billetes-gastos {
     width: 200px;
 }
 
 /* CONTACTO */
 
-.contact-div{
+.contact-container {
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+.contact-div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 ul {
     list-style-type: none;
 }
 
-.contact-div-ul{
+.contact-div-ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    /* Se fija en la parte inferior de la ventana */
+    background-color: #ff91c4;
+    -webkit-box-shadow: 0px -9px 20px 0px #b14c8b;
+    -moz-box-shadow: 0px -9px 20px 0px #b14c8b;
+    box-shadow: 0px -9px 20px 0px #b14c8b;
+}
+
+.ul-footer {
+    list-style-type: none;
+    font-size: 0.2rem;
+}
+
+.li-footer {
+    margin-left: 20px;
+    display: inline;
+    
+}
+
+.fa-envelope,
+.fa-github,
+.fa-whatsapp,
+.fa-linkedin-in {
+    font-size: 1.5rem;
 }
