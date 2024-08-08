@@ -1,285 +1,221 @@
 /* PALETA DE COLORES */
 :root {
-    --amarillo: #ffff7a;
-    --verdecito: #8dd6dc;
-    --verde-obscuro: #ff91c4;
-    /* Cambio realizado */
-    --lila3: #e376df;
-    --lila2: #dd91dd;
-    --lila1: #daadda;
-    --rosa-pastel: #d8b3d9;
-    --rosa-obscuro: #b14c8b;
+  --amarillo: #ffff7a;
+  --verdecito: #8dd6dc;
+  --verde-obscuro: #ff91c4;
+  --lila3: #e376df;
+  --lila2: #dd91dd;
+  --lila1: #daadda;
+  --rosa-pastel: #d8b3d9;
+  --rosa-obscuro: #b14c8b;
 }
 
-* {
-    max-width: 100vw;
-}
-
-/* html{
-    overflow-x: hidden;
-} */
-
-/* FUENTE */
+/* Estilos generales */
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: var(--amarillo);
-    color: var(--rosa-obscuro);
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--amarillo);
+  color: var(--rosa-obscuro);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1,
-h2 {
-    margin: 0;
+h1, h2 {
+  margin: 0;
 }
 
-p,
-span,
-li,
-a {
-    margin: 0;
-    font-size: 1.5rem;
+p, span, li, a {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 /* LINKS */
 a {
-    text-decoration: none;
-    color: var(--rosa-obscuro);
+  text-decoration: none;
+  color: var(--rosa-obscuro);
 }
-
 
 /* HEADER */
 header {
-    background-color: var(--amarillo);
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  background-color: var(--amarillo);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 /* NAV BAR */
 nav {
-    background-color: var(--amarillo);
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    -webkit-box-shadow: 0px 9px 20px 0px #f5e251;
-    -moz-box-shadow: 0px 9px 20px 0px #f5e251;
-    box-shadow: 0px 9px 20px 0px #f5e251;
+  background-color: var(--amarillo);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 9px 20px 0px #f5e251; /* Simplificado */
 }
 
 .ul-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .li-nav {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-left: 20px;
-    /* Espacio entre elementos de la lista de navegación */
-    display: inline-block;
-    /* Mostrar elementos en línea */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  display: inline-block;
 }
 
-/* MAIN */
+/* MAIN - Sección de bienvenida */
 .welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 7rem; /* Ajustado para dejar espacio para la barra de navegación */
 }
 
 .i-do {
-    display: flex;
-    width: fit-content;
-    /* padding-left: 1rem; */
+  display: flex;
+  width: fit-content;
 }
 
 .i-do-a:hover {
+  --b: 0.2rem;
+  --c: #ce61a4;
 
-    --b: 0.2rem;
-    /* the thickness of the line */
-    --c: #ce61a4;
-    /* the color */
-
-    color: #8dd6dc;
-    padding-block: var(--b);
-    background:
-        linear-gradient(var(--c) 50%, #8dd6dc 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
-        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
-    -webkit-background-clip: text, padding-box;
-    background-clip: text, padding-box;
-    transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
+  color: #8dd6dc;
+  padding-block: var(--b);
+  background:
+    linear-gradient(var(--c) 50%, #8dd6dc 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
 }
 
 .i-do-a:hover {
-    --_p: 100%;
-    --_s: .1s;
+  --_p: 100%;
+  --_s: .1s;
 }
-
-
-/* .i-do-a {
-        justify-content: center;
-} */
 
 /* RETRATO */
 .retrato-box {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 2rem 0;
-    box-shadow: inset 0 0 0 3px var(--amarillo), inset 0 0 0 6px var(--verdecito),
-        inset 0 0 0 9px var(--rosa-obscuro), inset 0 0 0 12px var(--lila3),
-        inset 0 0 0 15px var(--lila2);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2rem 0;
+  box-shadow: inset 0 0 0 3px var(--amarillo), inset 0 0 0 6px var(--verdecito),
+    inset 0 0 0 9px var(--rosa-obscuro), inset 0 0 0 12px var(--lila3),
+    inset 0 0 0 15px var(--lila2);
 }
 
 .retrato {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* CONOCIMIENTOS */
 .knowledge {
-    background-color: var(--verde-obscuro);
-    height: 100vh;
-    padding-top: 5rem;
-
+  background-color: var(--verde-obscuro);
+  height: 100vh;
+  padding-top: 5rem;
+  display: flex; /* Agregado para centrar el contenido */
+  flex-direction: column;
+  align-items: center;
 }
 
 .knowledge-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* Eliminado display: flex, ya que .knowledge ahora lo tiene */
 }
 
 .knowledge-icon-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .knowledge-icon {
-    margin: 10px;
-    padding: 10px;
-    background-color: var(--verdecito);
-    border: 5px solid var(--rosa-obscuro);
-    justify-content: center;
-    align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--verdecito);
+  border: 5px solid var(--rosa-obscuro);
+  display: flex; /* Agregado para centrar el contenido */
+  justify-content: center;
+  align-items: center;
 }
 
 .knowledge-list {
-    font-size: 7rem;
+  font-size: 5rem; /* Ajustado para mejor legibilidad en pantallas pequeñas */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .knowledge-list {
+    font-size: 3rem; 
+  }
 }
 
 /* QUOTE */
 .quote {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
-    margin-right: 5.5rem;
-    height: 100vh;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  margin-right: 5.5rem;
+  height: 100vh;
 }
 
 .parrafo-quote1 {
-    text-align: center;
-    margin-bottom: 4rem;
-    font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
 }
 
 .chat-bubble {
-    width: 400px;
-    padding-top: 15rem;
-
+  width: 400px;
+  padding-top: 15rem;
 }
 
 /* PROYECTOS */
 .project-list {
-    background-color: #8dd6dc;
-    height: 100vh;
-    padding-top: 5rem;
+  background-color: #8dd6dc;
+  height: 100vh;
+  padding-top: 5rem;
+  display: flex; /* Agregado para centrar el contenido */
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.robot-memes {
-    width: 200px;
-}
-
+.robot-memes, 
 .billetes-gastos {
-    width: 200px;
+  width: 200px;
+  margin: 10px; /* Agregado para separar los proyectos */
 }
 
 /* CONTACTO */
-
 .contact-container {
-    height: 100vh;
-    padding-top: 4rem;
+  height: 100vh;
+  padding-top: 4rem;
+  display: flex; /* Agregado para centrar el contenido */
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.contact-div-ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    /* Se fija en la parte inferior de la ventana */
-    background-color: #ff91c4;
-    -webkit-box-shadow: 0px -9px 20px 0px #b14c8b;
-    -moz-box-shadow: 0px -9px 20px 0px #b14c8b;
-    box-shadow: 0px -9px 20px 0px #b14c8b;
-}
-
-.ul-footer {
-    list-style-type: none;
-    font-size: 0.2rem;
-}
-
-.li-footer {
-    margin-left: 20px;
-    display: inline;
-    
-}
-
-.fa-envelope,
-.fa-github,
-.fa-whatsapp,
-.fa-linkedin-in {
-    font-size: 1.5rem;
+  /* Eliminado display: flex, ya que .contact-container ahora lo tiene */
 }
