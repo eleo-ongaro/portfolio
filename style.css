@@ -10,23 +10,41 @@
   --rosa-obscuro: #b14c8b;
 }
 
-/* Estilos generales */
+* {
+  max-width: 100vw;
+}
+
+
+
+/* FUENTE */
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--amarillo);
   color: var(--rosa-obscuro);
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-h1, h2 {
+/* .cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+
+h1,
+h2 {
   margin: 0;
+  font-size: 3rem;
 }
 
-p, span, li, a {
+p,
+span,
+li,
+a {
   margin: 0;
   font-size: 1.5rem;
 }
@@ -42,78 +60,104 @@ header {
   background-color: var(--amarillo);
   position: sticky;
   top: 0;
-  z-index: 999;
 }
 
 /* NAV BAR */
 nav {
   background-color: var(--amarillo);
   width: 100%;
-  height: 40px;
+  height: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* Distribución uniforme de los elementos */
   align-items: center;
   position: fixed;
   top: 0;
-  box-shadow: 0px 9px 20px 0px #f5e251; /* Simplificado */
+  box-shadow: 0px 9px 20px 0px #f5e251;
 }
 
-.ul-nav {
+.ul-nav , .contact-div-ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex; /* Para alinear los elementos horizontalmente */
 }
 
 .li-nav {
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-left: 20px;
-  display: inline-block;
+  font-size: 1.2rem; /* Tamaño de fuente uniforme */
+  margin: 0 15px; /* Espacio entre elementos */
 }
 
+.li-nav a {
+  color: var(--rosa-obscuro);
+  text-decoration: none;
+}
+
+.li-nav a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+.welcome, .knowledge, .quote, .project-list, .contact-container {
+  box-sizing: border-box; 
+}
+
+.welcome-container, .knowledge-container, .quote-content, .project-container, .contact-div {
+  max-width: 100%; 
+  box-sizing: border-box;
+}
 /* MAIN - Sección de bienvenida */
+main{
+  max-height: 1vh;
+}
+
 .welcome {
   display: flex;
   flex-direction: column;
+  height: 40rem;
+  padding: 7rem;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  padding-top: 7rem; /* Ajustado para dejar espacio para la barra de navegación */
+  /* Agregar un ancho máximo para evitar que el contenido se estire demasiado */
+  max-width: 800px; 
+}
+.hola h2{
+  font-size: 2rem;
+}
+.welcome-container h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-container p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .i-do {
-  display: flex;
-  width: fit-content;
+  margin-top: 3vw;
 }
 
-.i-do-a:hover {
-  --b: 0.2rem;
-  --c: #ce61a4;
-
-  color: #8dd6dc;
-  padding-block: var(--b);
-  background:
-    linear-gradient(var(--c) 50%, #8dd6dc 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
-  -webkit-background-clip: text, padding-box;
-  background-clip: text, padding-box;
-  transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
-}
-
-.i-do-a:hover {
-  --_p: 100%;
-  --_s: .1s;
+.i-do-a {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #ffe0ee;
+  border: 2px solid var(--rosa-obscuro);
+  border-radius: 5px;
 }
 
 /* RETRATO */
 .retrato-box {
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
+  margin-left: 3rem;
+  box-shadow: inset 0 0 0 3px var(--amarillo), inset 0 0 0 6px var(--verdecito), inset 0 0 0 9px var(--rosa-obscuro), inset 0 0 0 12px var(--lila3), inset 0 0 0 15px var(--lila2);
   overflow: hidden;
-  margin: 2rem 0;
-  box-shadow: inset 0 0 0 3px var(--amarillo), inset 0 0 0 6px var(--verdecito),
-    inset 0 0 0 9px var(--rosa-obscuro), inset 0 0 0 12px var(--lila3),
-    inset 0 0 0 15px var(--lila2);
 }
 
 .retrato {
@@ -122,45 +166,57 @@ nav {
   object-fit: cover;
 }
 
+
 /* CONOCIMIENTOS */
 .knowledge {
   background-color: var(--verde-obscuro);
-  height: 100vh;
-  padding-top: 5rem;
-  display: flex; /* Agregado para centrar el contenido */
+  min-height: 30vw;
+  padding: 5rem 2rem; /* Espacio superior e inferior */
+  display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.knowledge-container {
-  /* Eliminado display: flex, ya que .knowledge ahora lo tiene */
+.knowledge-container h2 {
+  margin-bottom: 1rem;
+}
+
+.knowledge-container p {
+  font-size: 1.5rem;
+  margin: 2rem;
 }
 
 .knowledge-icon-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
+  gap: 40px
 }
 
 .knowledge-icon {
-  margin: 10px;
-  padding: 10px;
-  background-color: var(--verdecito);
-  border: 5px solid var(--rosa-obscuro);
-  display: flex; /* Agregado para centrar el contenido */
-  justify-content: center;
+  margin: 0; 
+  padding: 20px;
+  background-color: #fbffbb;
+  border: 3px solid var(--rosa-obscuro);
+  display: flex;
+  flex-direction: column; 
   align-items: center;
+  text-align: center; /* Centrar el texto dentro del icono */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: transform 0.2s ease-in-out; /* Transición suave al pasar el mouse */
+}
+
+.knowledge-icon:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
 }
 
 .knowledge-list {
-  font-size: 5rem; /* Ajustado para mejor legibilidad en pantallas pequeñas */
+  font-size: 3rem; 
+  margin-top: 10px; 
 }
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-  .knowledge-list {
-    font-size: 3rem; 
-  }
+.knowledge-icon span {
+  font-size: 1rem; 
 }
 
 /* QUOTE */
@@ -168,54 +224,300 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
-  margin-right: 5.5rem;
-  height: 100vh;
+  min-height: 30vw;
+  margin-bottom: 2rem;
+  flex-direction: column; /* Apilar elementos verticalmente en pantallas pequeñas */
+}
+
+.quote-content {
+  display: flex;
+  align-items: center;
+  margin: 10vw;
+}
+
+.parrafo-quote {
+  padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .parrafo-quote1 {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.5rem;
   text-align: center;
-  margin-bottom: 4rem;
-  font-size: 2.5rem;
+  /* margin-bottom: 2rem; */
+  font-size: 2rem;
+  /* max-width: 100%; */
+  padding: 1rem;
 }
 
 .chat-bubble {
-  width: 400px;
-  padding-top: 15rem;
+  width: 300px; /* Ajustado para mejor visualización en pantallas pequeñas */
+  /* margin-right: 2rem; */
+}
+
+@media (max-width: 768px) {
+  .quote-content {
+    flex-direction: column; /* Apilar elementos verticalmente en pantallas pequeñas */
+  }
+
+  .chat-bubble {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 /* PROYECTOS */
 .project-list {
   background-color: #8dd6dc;
-  height: 100vh;
-  padding-top: 5rem;
-  display: flex; /* Agregado para centrar el contenido */
+  min-height: 100vh; 
+  padding: 5rem 2rem;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  width: 100%; /* Aseguramos que ocupe todo el ancho */
 }
 
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.project-list h2 {
+
+  margin-bottom: 1rem;
+}
+
+.project-list p {
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.robot-memes, 
-.billetes-gastos {
-  width: 200px;
-  margin: 10px; /* Agregado para separar los proyectos */
+
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustamos el ancho mínimo de las cards */
+  gap: 20px;
+}
+
+.project-list .project-container .project { /* Mayor especificidad */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.project-list .project-container .project img { /* Mayor especificidad */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.project h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--rosa-obscuro);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.project a:hover {
+  background-color: var(--lila3);
+}
+
+
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr; 
+  }
 }
 
 /* CONTACTO */
+
+#contacto {
+  border: black 10px;
+  border-style: solid;
+}
 .contact-container {
-  height: 100vh;
-  padding-top: 4rem;
-  display: flex; /* Agregado para centrar el contenido */
+  min-height: 100vh;
+  padding: 5%;
+  margin-top: 3vw;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  z-index: 1;
+  border: rgb(224, 7, 7) 10px;
+  border-style: solid;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+  justify-content: center;
+  border: rgb(32, 10, 230) 10px;
+  border-style: solid;
+  max-width: 800px; 
+  margin-bottom: 100px;
 }
 
 .contact-div {
-  /* Eliminado display: flex, ya que .contact-container ahora lo tiene */
+  padding: 1rem;
+  border: rgb(226, 9, 172) 10px;
+  border-style: solid;
+}
+
+.contact-div p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.contact-div-container-ul { 
+  display: flex;
+  margin:0%;
+  border: rgb(7, 196, 243) 10px;
+  border-style: solid;
+}
+
+.contact-div-ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  /* margin: 1rem; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* align-items: initial; */
+}
+
+.li-contact {
+  margin: 5px;
+  display: flex;
+  align-items:center;
+}
+
+.li-contact a {
+  display: flex;
+  align-items: center; 
+  color: var(--rosa-obscuro); 
+  font-size: medium;
+}
+
+.li-contact i {
+  margin-right: 5px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.formulario-contacto {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+.container-contact-formulario {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  border: rgb(31, 11, 87) 10px;
+  border-style: solid;
+}
+
+.formulario-contacto h2 {
+  margin-bottom: 1rem;
+  border: rgb(247, 243, 243) 10px;
+  border-style: solid;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contacto form div {
+  margin-bottom: 1rem;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.8rem; 
+  border: 2px solid var(--rosa-pastel); 
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+.formulario-contacto button[type="submit"] {
+  padding: 0.8rem 1.5rem; 
+  background-color: var(--rosa-obscuro);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.formulario-contacto button[type="submit"]:hover {
+  background-color: var(--lila3);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  /* Se fija en la parte inferior de la ventana */
+  background-color: #ff91c4;
+  /* -webkit-box-shadow: 0px -9px 20px 0px #b14c8b;
+  -moz-box-shadow: 0px -9px 20px 0px #b14c8b;
+  box-shadow: 0px -9px 20px 0px #b14c8b; */
+  border: rgb(7, 250, 238) 10px;
+  border-style: solid;
+  z-index: 0;
+}
+
+
+.ul-footer {
+  list-style-type: none;
+  font-size: 0.2rem;
+}
+
+.li-footer {
+  margin-left: 20px;
+  display: inline;
+}
+
+.fa-envelope,
+.fa-github,
+.fa-whatsapp,
+.fa-linkedin-in {
+  font-size: 1.5rem;
 }

@@ -1,175 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/dev2.png" />
+    <title>Dev Eleo</title>
+    <script
+      src="https://kit.fontawesome.com/d2f0778e32.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Homemade+Apple&display=swap" rel="stylesheet">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="./assets/dev2.png" />
-  <title>Dev Eleo</title>
-  <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <nav>
+        <ul class="ul-nav">
+          <li class="li-nav"><a href="#welcome">Inicio</a></li>
+          <li class="li-nav"><a href="#tecnologias">Tecnologías</a></li>
+          <li class="li-nav"><a href="#proyectos">Proyectos</a></li>
+          <li class="li-nav"><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <nav class="listaNav">
-      <ul class="ul-nav">
-        <li class="li-nav">Hola!</li>
-        <li class="li-nav"><a href="#tecnologias">Tecnologías</a></li>
-        <li class="li-nav"><a href="#proyectos">Proyectos</a></li>
-        <li class="li-nav"><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="welcome">
-      <div class="welcome-container">
-        <div class="hola">
-          <h2>Hola!</h2>
-          <h1>Soy Eleo</h1>
+    <main>
+      <section class="welcome" id="welcome">
+        <div class="welcome-container">
+          <div class="hola">
+            <h2>¡Hola!</h2>
+            <h1>Soy Eleo</h1>
+          </div>
+          <p>Desarrolladora 🕸️, Slytherin girl 🐍 y nerd 🤓</p>
+          <div class="i-do">
+            <a href="#proyectos" class="i-do-a">Esto hago</a>
+          </div>
         </div>
-        <p>Desarrolladora 🕸️, Slytherin girl 🐍 y nerd 🤓</p>
-        <div class="i-do">
-          <a href="#proyectos" class="i-do-a">Esto hago</a>
+
+        <div class="retrato-box">
+          <img src="./assets/retratos/1.png" alt="Foto de Eleo" class="retrato"/>
         </div>
-      </div>
+      </section>
 
-      <div class="retrato-box">
-        <img src="./assets/retratos/retrato1a.png" alt="foto retrato" class="retrato" />
-      </div>
-    </div>
-
-    <div class="knowledge" id="tecnologias">
-      <section class="knowledge-container">
-        <h2>Tecnologías con las que trabajo</h2>
-        <p>Mira mamá! Sé usar estas tecnologías!</p>
-        <div class="knowledge-icon-container">
-          <div class="knowledge-icon">
-            <i class="fab fa-html5 knowledge-list"></i>
-            <span>HTML 5</span>
-          </div>
-          <div class="knowledge-icon">
-            <i class="fab fa-css3-alt knowledge-list"></i>
-            <span>CSS 3</span>
-          </div>
-          <div class="knowledge-icon">
-            <i class="fab fa-sass knowledge-list"></i>
-            <span>SASS</span>
-          </div>
-          <div class="knowledge-icon">
-            <i class="fab fa-js-square knowledge-list"></i>
-            <span>JavaScript</span>
-          </div>
-          <div class="knowledge-icon">
-            <i class="fab fa-react knowledge-list"></i>
-            <span>React</span>
-          </div>
-          <div class="knowledge-icon">
-            <i class="fab fa-git-alt knowledge-list"></i>
-            <span>Git</span>
+      <section class="knowledge" id="tecnologias">
+        <div class="knowledge-container">
+          <h2>Tecnologías con las que trabajo</h2>
+          <p>¡Mira mamá! Sé usar estas tecnologías!</p>
+          <div class="knowledge-icon-container">
+            <div class="knowledge-icon">
+              <i class="fab fa-html5 knowledge-list"></i>
+              <span>HTML 5</span>
+            </div>
+            <div class="knowledge-icon">
+              <i class="fab fa-css3-alt knowledge-list"></i>
+              <span>CSS 3</span>
+            </div>
+            <div class="knowledge-icon">
+              <i class="fab fa-sass knowledge-list"></i>
+              <span>SASS</span>
+            </div>
+            <div class="knowledge-icon">
+              <i class="fab fa-js-square knowledge-list"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="knowledge-icon">
+              <i class="fab fa-react knowledge-list"></i>
+              <span>React</span>
+            </div>
+            <div class="knowledge-icon">
+              <i class="fab fa-git-alt knowledge-list"></i>
+              <span>Git</span>
+            </div>
           </div>
         </div>
       </section>
-    </div>
 
-    <div class="quote">
-      <div>
-        <img src="./assets/chat.png" alt="burbuja de conversación 3d, con 3 círculos rosa dentro" class="chat-bubble"/>
-      </div>
-      <div class="parrafo-quote">
-        <p class="parrafo-quote1">"Son poco los que el Sombrero pone en Slytherin, pero eso es porque lo mejor siempre
-          es más difícil de
-          lograr"</p>
-        <p class="parrafo-quote1">Astucia, ingenio y ambición</p>
-      </div>
-    </div>
+      <section class="quote">
+        <div class="quote-content">
+          <div>
+            <img
+              src="./assets/sly.png"
+              alt="Burbuja de conversación 3D con círculos rosa"
+              class="chat-bubble"
+            />
+          </div>
+          <div class="parrafo-quote">
+            <p class="parrafo-quote1">
+              "Son pocos los que el Sombrero pone en Slytherin, pero eso es
+              porque lo mejor siempre es más difícil de lograr"
+            </p>
+            <p class="parrafo-quote1">Astucia, ingenio y ambición</p>
+          </div>
+        </div>
+      </section>
 
-    <div class="project-list" id="proyectos">
-      <section>
+      <section class="project-list" id="proyectos">
         <h2>Mis Proyectos</h2>
-        <p>Mira mamá las cosas copadas que vengo haciendo!</p>
+        <p>¡Mira mamá las cosas copadas que vengo haciendo!</p>
         <div class="project-container">
-          <!-- <div class="card-portfolio">
-            <img src="./assets/retratos/IArayas.jpeg" alt="Portfolio" />
-            <span>Portfolio</span> 
-          </div>-->
-          <div class="card-robot">
-            <img src="./assets/proyectos/generador-memes.png" alt="Generador de memes" class="robot-memes"/>
-            <span>Generador de memes</span>
-          </div>
-          <div class="card-ahorradas">
-            <img src="./assets/proyectos/gastos.png" alt="billetera de colores" class="billetes-gastos"/>
-            <span>Controlador de gastos</span>
-          </div>
-
-          <!-- Agrega el resto de proyectos aquí -->
-        </div>
-      </section>
-    </div>
-
-    <div class="contact-container" id="contacto">
-      <section class="contact">
-        <div class="contact-div">
-          <h2>Contactame</h2>
-          <p>
-            ¿Te interesa mi trabajo? ¿Quieres contactarme?<br />Hazlo a través de
-            cualquiera de mis redes
-          </p>
-        </div>
-
-        <div>
-          <ul class="contact-div-ul">
-            <li class="li-contact">
-              <i class="fab fa-linkedin-in"></i>
-              <a href="https://www.linkedin.com/in/eleo-ongaro/">@eleo-ongaro</a>
-            </li>
-            <li class="li-contact">
-              <i class="fab fa-whatsapp"></i>
-              <a href="https://wa.me/2216542781">WhatsApp</a>
-            </li>
-            <li class="li-contact">
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/eleo-ongaro">@eleo-ongaro</a>
-            </li>
-            <li class="li-contact">
-              <i class="far fa-envelope"></i>
-              <a href="mailto:eleo.ongaro@gmil.com">Mail</a>
-            </li>
-          </ul>
+          <article class="project">
+            <img
+              src="./assets/proyectos/generador-memes.png"
+              alt="Generador de memes"
+            />
+            <h3>Generador de memes</h3>
+            <p>Una aplicación web para crear memes personalizados.</p>
+            <a href="https://eleo-ongaro.github.io/generadorMemes/" target="_blank">Ver proyecto</a>
+          </article>
+          <article class="project">
+            <img
+              src="./assets/proyectos/gastos.png"
+              alt="Billetera de colores"
+            />
+            <h3>Controlador de gastos</h3>
+            <p>Una herramienta para gestionar tus ingresos y gastos.</p>
+            <a href="https://eleo-ongaro.github.io/AhorrAdas/" target="_blank">Ver proyecto</a>
+          </article>
+          <article class="project">
+            <img
+              src="./assets/proyectos/notebook.png"
+              alt="Imagen del portfolio"
+            />
+            <h3>Portfolio</h3>
+            <p>Mi portfolio personal, ¡donde estás ahora mismo!</p>
+            <a href="https://github.com/eleo-ongaro/portfolio" target="_blank">Ver código fuente</a>
+          </article>
+          <article class="project">
+            <img
+              src="./assets/proyectos/cetec.png"
+              alt="Icono de Google Sheets"
+            />
+            <h3>Sistema de Gestión de Casos de Salud</h3>
+            <p>
+              Un sistema de gestión y seguimiento de casos de salud con Google
+              Sheets y Apps Script.
+            </p>
+            <a
+              href="https://github.com/eleo-ongaro/automatizacion-GAS"
+              target="_blank"
+              >Ver documento</a
+            >
+          </article>
         </div>
       </section>
 
-      <div>
-        <h2>Escríbeme</h2>
-        <span>poner formulario</span>
+      <section class="contact-container" id="contacto">
+        <h2>Contacto</h2>
+        <div class="container-contact-formulario">
+          <div class="contact-content" id="contactContent">
+            <div class="contact-div">
+              <p>
+                ¿Te interesa mi trabajo? ¿Quieres contactarme?<br />Hacelo a
+                través de cualquiera de mis redes:
+              </p>
+            </div>
+
+            <div class="contact-div-container-ul">
+              <ul class="contact-div-ul">
+                <li class="li-contact">
+                  <i class="fab fa-linkedin-in"></i>
+                  <a href="https://www.linkedin.com/in/eleo-ongaro/"
+                    >@eleo-ongaro</a
+                  >
+                </li>
+                <li class="li-contact">
+                  <i class="fab fa-whatsapp"></i>
+                  <a href="https://wa.me/2216542781">WhatsApp</a>
+                </li>
+                <li class="li-contact">
+                  <i class="fab fa-github"></i>
+                  <a href="https://github.com/eleo-ongaro">@eleo-ongaro</a>
+                </li>
+                <li class="li-contact">
+                  <i class="far fa-envelope"></i>
+                  <a href="mailto:eleo.ongaro@gmil.com">Mail</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="formulario-contacto">
+            <form>
+              <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required />
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="off" />
+              </div>
+              <div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="contact-footer">
+        <ul class="ul-footer">
+          <li class="li-footer">
+            <i class="fab fa-linkedin-in"></i>
+            <a href="https://www.linkedin.com/in/eleo-ongaro/" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="li-footer">
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/2216542781" target="_blank">WhatsApp</a>
+          </li>
+          <li class="li-footer">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/eleo-ongaro" target="_blank">GitHub</a>
+          </li>
+          <li class="li-footer">
+            <i class="far fa-envelope"></i>
+            <a href="mailto:eleo.ongaro@gmil.com">Correo</a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </main>
-  <footer>
-    <div class="contact-footer">
-      <ul class="ul-footer">
-        <li class="li-footer">
-          <i class="fab fa-linkedin-in"></i>
-          <a href="https://www.linkedin.com/in/eleo-ongaro/">LinkedIn</a>
-        </li>
-        <li class="li-footer">
-          <i class="fab fa-whatsapp"></i>
-          <a href="https://wa.me/2216542781">WhatsApp</a>
-        </li>
-        <li class="li-footer">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/eleo-ongaro">GitHub</a>
-        </li>
-        <li class="li-footer">
-          <i class="far fa-envelope"></i>
-          <a href="mailto:eleo.ongaro@gmil.com">Correo</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
