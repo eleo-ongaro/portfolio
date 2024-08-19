@@ -105,9 +105,9 @@ nav {
   box-sizing: border-box;
 }
 /* MAIN - Sección de bienvenida */
-main{
-  /* max-height: 1vh; */
-}
+/*main{
+   max-height: 1vh; 
+}*/
 
 .welcome {
   display: flex;
@@ -345,10 +345,10 @@ main{
 
 /* CONTACTO */
 
-#contacto {
-  /* border: black 10px;
-  border-style: solid; */
-}
+/* #contacto {
+  border: black 10px;
+  border-style: solid;
+} */
 .contact-container {
   min-height: 100vh; 
   padding: 4rem 2rem;
